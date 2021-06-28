@@ -17,5 +17,5 @@ jobs:
       - name: Display context
         run: cat ${{ github.event_path }}
       - name: Branch Name
-        run: echo ${GITHUB_REF#/refs/*/}
+        run: echo ${GITHUB_REF#refs/*/}
 
