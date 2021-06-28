@@ -1,0 +1,19 @@
+me: CI
+
+on:
+  push:
+    branches:
+      - 'master'
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  build:
+    steps:
+      - name: Check out Code
+        uses: actions/checkout@v2
+      - name: Display context
+        run: cat ${{ github.event_path }}
+      - name: Branch Name
+        run: echo ${GITHUB_REF#/refs/*/}
+
