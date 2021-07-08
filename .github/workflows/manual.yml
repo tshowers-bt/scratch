@@ -1,0 +1,42 @@
+name: Manually triggered workflow
+on:
+  workflow_dispatch:
+    inputs:
+      api_branch:
+        description: 'The API branch whose artifact should be packaged (default: develop)'
+        required: true
+        default: 'develop'
+      api_build_number:
+        description: 'The build # of the API artifact to use (default: LATEST)'
+        required: true
+        default: 'LATEST'
+      frontend_branch:
+        description: 'The frontend branch whose artifact should be packaged (default: master)'
+        required: true
+        default: 'master'
+      frontend_build_number:
+        description: 'The build # of the frontend artifact to use (default: LATEST)'
+        required: true
+        default: 'LATEST'
+      profile_branch:
+        description: 'The profile branch whose artifact should be packaged (default: master)'
+        required: true
+        default: 'master'
+      profile_build_number:
+        description: 'The build # of the profile artifact to use (default: LATEST)'
+        required: true
+        default: 'LATEST'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do thing
+        run: |
+          apiArtifact="pbsmc-server/${{ github.event.inputs.api_branch }}/${{ github.event.inputs.api_build_number }}"
+          frontendArtifact="pbsmc-frontend/${{ github.event.inputs.frontend_branch }}/${{ github.event.inputs.frontend_build_number }}"
+          profileArtifact="pbsmc-profile/${{ github.event.inputs.profile_branch }}/${{ github.event.inputs.profile_build_number }}"
+          echo API artifact: $apiArtifact
+          echo Frontend artifact: $frontendArtifact
+          echo Profile artifact: $profileArtifact
+
