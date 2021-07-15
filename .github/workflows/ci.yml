@@ -8,7 +8,7 @@ jobs:
     name: Try Env Stuff
     runs-on: ubuntu-latest
     env:
-      GIT_REF: ${{ env.GITHUB_REF#refs/*/ }}
+      GIT_REF: ${{ env.GITHUB_REF }}
     steps:
       - run: echo $GIT_REF
       
