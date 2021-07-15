@@ -10,5 +10,5 @@ jobs:
     env:
       GIT_REF: ${{ env.GITHUB_REF#refs/*/ }}
     steps:
-      run: echo $GIT_REF
+      - run: echo $GIT_REF
       
