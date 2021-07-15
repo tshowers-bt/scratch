@@ -1,0 +1,14 @@
+name: Try Env Stuff
+on:
+  push:
+    branches:
+      - master
+jobs:
+  try-env-stuff:
+    name: Try Env Stuff
+    runs-on: ubuntu-latest
+    env:
+      GIT_REF: ${{ env.GITHUB_REF#refs/*/ }}
+    steps:
+      run: echo $GIT_REF
+      
