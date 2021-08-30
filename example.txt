@@ -11,4 +11,4 @@ Now that you get the idea; here are more examples.
 
 Sometimes dogs are brown.
 
-I'm not really that good at creativity; but I try. See ./attempt-creativity.txt for an example.
+I'm not really that good at creativity; but I try.
