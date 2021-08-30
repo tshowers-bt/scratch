@@ -1,0 +1,14 @@
+This is an example file.
+
+It contains some examples of text.
+
+Here are some examples of the examples of text:
+  - This is an example file.
+  - It contains some examples of text.
+  - Here are some examples of the examples of text:
+  
+Now that you get the idea; here are more examples.
+
+Sometimes dogs are brown.
+
+I'm not really that creative.
