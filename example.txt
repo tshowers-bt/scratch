@@ -15,3 +15,4 @@ I'm not really that creative.
 
 Let's trigger a major version bump in release please using "chore!" in a conventional commit.
 Let's do another one.
+Editing the changelog didn't work, lets try adding a version.txt file.
