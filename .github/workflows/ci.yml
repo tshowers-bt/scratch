@@ -8,7 +8,9 @@ jobs:
     name: Try Env Stuff
     runs-on: ubuntu-latest
     steps:
+      - id: save
+        run: echo "::set-output name=build-name::foof"
       - env:
-          GIT_REF: ${{ env.GITHUB_REF }}
-        run: echo $GIT_REF
+          BUILD_NAME: ${{ steps.save.outputs.build-name }}
+        run: echo $BUILD_NAME
 
