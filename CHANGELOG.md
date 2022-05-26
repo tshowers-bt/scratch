@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/tshowers-bt/scratch/compare/v2.1.1...v2.2.0) (2022-05-26)
+
+
+### Features
+
+* bump ([25d2c9f](https://github.com/tshowers-bt/scratch/commit/25d2c9f9d3e0d64efb095b00d745134808bf1cd9))
+
 ### [2.1.1](https://github.com/tshowers-bt/scratch/compare/v2.1.0...v2.1.1) (2022-03-04)
 
 
