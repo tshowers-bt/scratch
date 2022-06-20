@@ -54,6 +54,7 @@ jobs:
     needs: [publish-artifacts]
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       pull-requests: write
     steps:
       - name: Create or Update Release PR
