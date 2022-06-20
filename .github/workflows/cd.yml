@@ -1,0 +1,78 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - master
+env:
+  JFROG_CLI_BUILD_NAME: '${{ github.event.repository.name }}'
+
+# note: If permissions for any scopes are specified then all other scopes default to `none` so this
+# is actually setting all scopes to `none`. The docs suggest using `permissions: {}` but empty
+# mappings trigger a lint warning.
+permissions:
+  contents: none
+
+jobs:
+
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      release-created: ${{ steps.release-please.outputs.release_created }}
+    steps:
+      - name: Create Release
+        id: create-release
+        uses: google-github-actions/release-please-action@v3.1.1
+        with:
+          command: github-release
+          release-type: simple
+
+  publish-artifacts:
+    needs: [create-release]
+    if: ${{ !needs.create-release.outputs.release-created }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: Publish Build Information
+        run: |
+          STEP=5
+          for x in $(seq 300 -$STEP 0); do
+            MIN=$(echo "$x / 60" | bc)
+            SEC=$(echo "$x % 60" | bc)
+            printf '%d:%02d...\n' $MIN $SEC
+            sleep $STEP
+          done
+
+  release-pr:
+    needs: [publish-artifacts]
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Create or Update Release PR
+        id: release-pr
+        uses: google-github-actions/release-please-action@v3.1.1
+        with:
+          command: release-pr
+          release-type: simple
+
+  promote-artifacts:
+    needs: [create-release]
+    if: ${{ needs.create-release.outputs.release-created }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: Promote Artifact
+        run: echo "Promote the build"
