@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/tshowers-bt/scratch/compare/v2.3.0...v2.4.0) (2022-05-26)
+
+
+### Features
+
+* folders to match package name ([7936126](https://github.com/tshowers-bt/scratch/commit/793612665a41a9fb3330f8e71f8bcae94d30617e))
+
 ## [2.3.0](https://github.com/tshowers-bt/scratch/compare/v2.2.0...v2.3.0) (2022-05-26)
 
 
