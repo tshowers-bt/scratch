@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Create Release
         id: create-release
-        uses: google-github-actions/release-please-action@v3.1.1
+        uses: google-github-actions/release-please-action@v3
         with:
           command: github-release
           release-type: simple
