@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/tshowers-bt/scratch/compare/v2.5.0...v2.5.1) (2022-06-24)
+
+
+### Bug Fixes
+
+* fix reference to step output in job output ([8de2be0](https://github.com/tshowers-bt/scratch/commit/8de2be061d3833fee795383d92156482d7307256))
+
 ## [2.5.0](https://github.com/tshowers-bt/scratch/compare/v2.4.2...v2.5.0) (2022-06-24)
 
 
