@@ -44,7 +44,7 @@ jobs:
       - name: Publish Build Information
         run: |
           STEP=5
-          for x in $(seq 300 -$STEP 0); do
+          for x in $(seq 60 -$STEP 0); do
             MIN=$(echo "$x / 60" | bc)
             SEC=$(echo "$x % 60" | bc)
             printf '%d:%02d...\n' $MIN $SEC
