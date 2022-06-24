@@ -29,6 +29,8 @@ jobs:
         with:
           command: github-release
           release-type: simple
+      - name: Write Outputs
+        run: echo "${{join(steps.create-release.outputs.*, ', ')}}""
 
   publish-artifacts:
     needs: [create-release]
