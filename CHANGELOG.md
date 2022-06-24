@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.5.0](https://github.com/tshowers-bt/scratch/compare/v2.4.2...v2.5.0) (2022-06-24)
+
+
+### Features
+
+* write step outputs ([9088791](https://github.com/tshowers-bt/scratch/commit/908879131b8252afbb258c79b3255dbbda064e6b))
+
+
+### Bug Fixes
+
+* remove extra quote ([78de68b](https://github.com/tshowers-bt/scratch/commit/78de68b58b89e17d46c0a4c84d7140ab39639e27))
+* shorten build ([8b60eb6](https://github.com/tshowers-bt/scratch/commit/8b60eb66a1ad90b6b9eafd38dccb43b54c2a0982))
+
 ## [2.4.2](https://github.com/tshowers-bt/scratch/compare/v2.4.1...v2.4.2) (2022-06-24)
 
 
