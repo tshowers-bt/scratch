@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Create or Update Release PR
         id: release-pr
-        uses: google-github-actions/release-please-action@v3.1.1
+        uses: google-github-actions/release-please-action@v3
         with:
           command: release-pr
           release-type: simple
