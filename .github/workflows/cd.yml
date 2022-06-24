@@ -30,7 +30,7 @@ jobs:
           command: github-release
           release-type: simple
       - name: Write Outputs
-        run: echo "${{join(steps.create-release.outputs.*, ', ')}}""
+        run: echo "${{join(steps.create-release.outputs.*, ', ')}}"
 
   publish-artifacts:
     needs: [create-release]
