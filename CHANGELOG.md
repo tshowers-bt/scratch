@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.2](https://github.com/tshowers-bt/scratch/compare/v2.4.1...v2.4.2) (2022-06-24)
+
+
+### Bug Fixes
+
+* grant write on pull-requests to release step ([94f87af](https://github.com/tshowers-bt/scratch/commit/94f87afbfa4315e7ff2a9b09c2d56329b30b2672))
+
 ## [2.4.1](https://github.com/tshowers-bt/scratch/compare/v2.4.0...v2.4.1) (2022-06-24)
 
 
